@@ -1,0 +1,14 @@
+services:
+  ros:
+    privileged: true
+    image: ros2_drone
+    # container_name: ros2_container
+    environment:
+      - DISPLAY=192.168.1.141:0
+    devices:
+      - /dev/video0:/dev/video0
+      - /dev/bus/usb:/dev/bus/usb
+    volumes:
+      - C:/Users/Jaime/Documents/GitHub/Drone_control/ros2_ws/shared:/home/rosdev/ros2_ws
+    tty: true
+    stdin_open: true
