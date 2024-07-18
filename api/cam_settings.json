@@ -1,0 +1,20 @@
+{
+    "0999": {
+        "flip": 0,
+        "brightness": -120,
+        "contrast": 1.5,
+        "bin_threshold": 200
+    },
+    "1999": {
+        "brightness": -150,
+        "contrast": 2,
+        "bin_threshold": 150
+    },
+    "99": {
+        "bin_threshold": 100,
+        "bin_adapt_threshold": [
+            11,
+            7
+        ]
+    }
+}
