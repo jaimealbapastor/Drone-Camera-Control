@@ -1,13 +1,14 @@
 import cv2
 
 # Open the video capture with the specific video device
-cap = cv2.VideoCapture('/dev/video0', cv2.CAP_V4L2)
+device = '/dev/video0'
+cap = cv2.VideoCapture(device, cv2.CAP_V4L2)
 
 # Set the video format to MJPEG
 cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
 
 if not cap.isOpened():
-    print("Error: Could not open video device.")
+    print("Error: Could not open video device:", device)
     exit()
 
 while True:

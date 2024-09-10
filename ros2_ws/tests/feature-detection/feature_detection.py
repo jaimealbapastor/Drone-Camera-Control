@@ -9,10 +9,6 @@ def resize_image(img, target_size):
     )
 
 
-def equalize_histogram(img):
-    return cv2.equalizeHist(img)
-
-
 def detect_and_match_features(img1, img2):
     # Initialize ORB detector
     orb = cv2.ORB_create(500)
@@ -45,30 +41,36 @@ def detect_and_match_features(img1, img2):
 
 
 # Load the images
-img1 = cv2.imread("cam1.jpg", cv2.IMREAD_GRAYSCALE)
-img2 = cv2.imread("cam2.jpg", cv2.IMREAD_GRAYSCALE)
+dir = "./tests/2/"
+img1 = cv2.imread(dir + "cam1.jpg", cv2.IMREAD_GRAYSCALE)
+img2 = cv2.imread(dir + "cam3.jpg", cv2.IMREAD_GRAYSCALE)
 
 # Preprocess the images
 target_size = img2.shape  # Resize img1 to match the size of img2
 
-img1_pre = equalize_histogram(img1)
-img1_pre = resize_image(img1_pre, target_size)
+
+# img1_eq = cv2.equalizeHist(img1)
+# img2_eq = cv2.equalizeHist(img2)
+# eq = cv2.resize(cv2.hconcat((img1, img1_eq)), (0, 0), fx=0.5, fy=0.5)
+# cv2.imshow("Equalization", eq)
 
 
-img2_eq = equalize_histogram(img2)
-# img2_med = cv2.medianBlur(img2_eq, 3)
-# img2_prep = cv2.GaussianBlur(img2_med, (5,5), 0)
-img2_prep = cv2.bilateralFilter(img2_eq, 11, 0, 0)
+img1_pre = resize_image(img1, target_size)
 
 
-comp = cv2.resize(cv2.hconcat((img2, img2_eq, img2_prep)), (0, 0), fx=0.5, fy=0.5)
-cv2.imshow("comparison", comp)
+# img2_med = cv2.medianBlur(img2, 3)
+img2_prep = cv2.GaussianBlur(img2, (5,5), 0)
+img2_prep = cv2.bilateralFilter(img2_prep, 11, 0, 0)
+
+
+# comp = cv2.resize(cv2.hconcat((img2, img2_eq, img2_prep)), (0, 0), fx=0.5, fy=0.5)
+# cv2.imshow("comparison", comp)
 
 keypoints1, keypoints2, matches, img_matches = detect_and_match_features(
     img1_pre, img2_prep
 )
 
-img_matches = cv2.resize(img_matches, (0, 0), fx=0.5, fy=0.5)
+# img_matches = cv2.resize(img_matches, (0, 0), fx=0.5, fy=0.5)
 # Show the matches
 cv2.imshow("Matches", img_matches)
 cv2.waitKey(0)
