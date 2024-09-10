@@ -17,9 +17,13 @@ echo "if [ -f '~/ros2_ws/install/setup.bash' ]; then" >> ~/.bashrc
 echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
 echo "fi" >> ~/.bashrc
 
-for device in /dev/video*; do
-    sudo chmod 666 "$device"
-done
+if ls /dev/video* 1> /dev/null 2>&1; then
+    for device in /dev/video*; do
+        sudo chmod 666 "$device"
+    done
+else
+    echo "No /dev/video* devices found."
+fi
 
 echo "# End of entrypoint.sh" >> ~/.bashrc
 

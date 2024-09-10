@@ -1,14 +1,31 @@
 services:
   ros:
+    build:
+      context: .
     privileged: true
-    image: ros2_drone
-    # container_name: ros2_container
+    image: ros2_img
+    container_name: ros2_cont
     environment:
-      - DISPLAY=192.168.1.141:0
+      - DISPLAY=host.docker.internal:0
+      # - DISPLAY=192.168.213.48:0
+      - XDG_RUNTIME_DIR=/tmp
+      - NVIDIA_VISIBLE_DEVICES=all
     devices:
-      - /dev/video0:/dev/video0
+      # - /dev/video0:/dev/video0
       - /dev/bus/usb:/dev/bus/usb
+      - /dev/dri:/dev/dri
+
+    runtime: nvidia
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
     volumes:
-      - C:/Users/Jaime/Documents/GitHub/Drone_control/ros2_ws/shared:/home/rosdev/ros2_ws
+       - C:/Users/Jaime/Documents/GitHub/Drone_control/ros2_ws/shared:/home/rosdev/ros2_ws
     tty: true
     stdin_open: true
