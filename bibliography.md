@@ -15,12 +15,21 @@
 - [1688 Drone Shop](https://shop79532958224g7.1688.com/)
 - [F4V3S](https://detail.1688.com/offer/701180510598.html?spm=a2615.2177701.autotrace-_t_14528463257940_1_0_2_1453456036484.23.69d537c3B0Zr6w)
 - [Kakute F7 Mini](https://ardupilot.org/copter/docs/common-holybro-kakutef7mini.html)
+- [ESP32 DIY project](https://github.com/joshuasrcho/ESP32-Quadcopter)
+- [Arduino FC PCB](https://www.youtube.com/watch?v=Vep09UZsuiQ)
 
 ## Firmware
 
 - [ArduPilot for SpeedyBee F405 V3](https://ardupilot.org/copter/docs/common-speedybeef4-v3.html)
 - [ArduPilot SILT](https://ardupilot.org/dev/docs/sitl-simulator-software-in-the-loop.html)
 - [Choosing Autopilot](https://ardupilot.org/copter/docs/common-autopilots.html)
+
+## Kalman filter
+
+[Kalman filter implementation for UAV](https://www.sciencedirect.com/science/article/pii/S1474667016382775)
+[UAV reference frames](https://www.researchgate.net/figure/Reference-frames-of-the-UAV-model_fig1_350813764)
+[Matlab Simulink UAV model tutorials](https://www.mathworks.com/solutions/robotics/uav.html)
+[Matlab, Simulink and UAV toolbox](https://www.youtube.com/watch?v=gXVlOixlPTQ)
 
 ## Issues
 
