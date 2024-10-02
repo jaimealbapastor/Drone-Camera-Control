@@ -44,3 +44,7 @@ List supported formats: `v4l2-ctl --list-formats-ext`
 
 - [Best WSN Protocols](https://chat.openai.com/share/8c3e90f0-7205-4a8c-9ce2-1fe88d1e2392)
 - [Optical flow sensors](https://ardupilot.org/copter/docs/common-optical-flow-sensors-landingpage.html)
+
+## To check out
+
+-[Flydra tracking system](https://github.com/strawlab/flydra?tab=readme-ov-file)
