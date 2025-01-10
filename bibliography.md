@@ -24,12 +24,24 @@
 - [ArduPilot SILT](https://ardupilot.org/dev/docs/sitl-simulator-software-in-the-loop.html)
 - [Choosing Autopilot](https://ardupilot.org/copter/docs/common-autopilots.html)
 
-## Kalman filter
+## Simulation
 
-[Kalman filter implementation for UAV](https://www.sciencedirect.com/science/article/pii/S1474667016382775)
 [UAV reference frames](https://www.researchgate.net/figure/Reference-frames-of-the-UAV-model_fig1_350813764)
 [Matlab Simulink UAV model tutorials](https://www.mathworks.com/solutions/robotics/uav.html)
 [Matlab, Simulink and UAV toolbox](https://www.youtube.com/watch?v=gXVlOixlPTQ)
+[Modelling, Simulation, and Control of a Quadcopter](https://fr.mathworks.com/videos/modelling-simulation-and-control-of-a-quadcopter-122872.html)
+[Overview of Sensor Fusion and Tracking for Autonomous Systems](https://fr.mathworks.com/content/dam/mathworks/ebook/gated/sensor-fusion-and-tracking-autonomous-systems-ebook.pdf?s_tid=vid_ofr_recs_non-EN)
+[Drone simulation and control Playlist](https://www.youtube.com/watch?v=hGcGPUqB67Q&list=PLPNM6NzYyzYqMYNc5e4_xip-yEu1jiVrr)  
+[Drone Positioning with Kalman Filtered Estimations](https://www.youtube.com/watch?v=U24Zl-3cTBY)
+[Universal approach to derivation of quaternion rotation formulas](https://www.matec-conferences.org/articles/matecconf/pdf/2019/41/matecconf_cscc2019_01060.pdf)
+[Applying angular velocity to quaternion](https://gamedev.stackexchange.com/questions/108920/applying-angular-velocity-to-quaternion)  
+[Attitude Estimation by Kalman Filter Based on the Integration of IMU and Multiple GPSs and Its Application to Connected Drones](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9240380)
+
+
+### Papers
+
+[Kalman filter implementation for UAV](https://www.sciencedirect.com/science/article/pii/S1474667016382775)
+[Evaluation of drag coefficient for a quadrotor model](https://www.imavs.org/papers/2022/4.pdf)
 
 ## Issues
 
@@ -48,3 +60,4 @@ List supported formats: `v4l2-ctl --list-formats-ext`
 ## To check out
 
 -[Flydra tracking system](https://github.com/strawlab/flydra?tab=readme-ov-file)
+
